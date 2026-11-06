@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | MedCare</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+
+  <body>
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="../index.html" class="logo">MedCare<span>.</span></a>
+
+        <nav>
+          <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="doctors.html">Doctors</a></li>
+            <li><a href="appointments.html">Book Appointment</a></li>
+            <li><a href="my-appointments.html">My Appointments</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="login.html" class="active">Login</a></li>
+          </ul>
+        </nav>
+
+        <button class="menu-toggle" id="menuToggle">☰</button>
+      </div>
+    </header>
+
+    <main class="login-section">
+      <div class="login-container">
+        <div class="login-info">
+          <h1>Your Health, <br />Our Priority.</h1>
+          <p>
+            Sign in to manage your appointments and connect with trusted
+            healthcare professionals.
+          </p>
+        </div>
+
+        <div class="login-card">
+          <h2>Welcome Back!</h2>
+          <p class="login-subtitle">Sign in to your MedCare account</p>
+
+          <form id="loginForm">
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+                required
+              />
+            </div>
+
+            <div class="login-options">
+              <label>
+                <input type="checkbox" id="rememberMe" />
+                Remember me
+              </label>
+
+              <a href="#" id="forgotPassword">Forgot password?</a>
+            </div>
+
+            <button type="submit" class="login-btn">Login</button>
+
+            <p id="loginMessage"></p>
+          </form>
+
+          <p class="register-link">
+            Don't have an account?
+            <a href="register.html">Create Account</a>
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+          &copy; <span id="currentYear"></span> MedCare. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/login.js"></script>
+  </body>
+</html>
