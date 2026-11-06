@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>My Appointments | MedCare</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/appointments.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+
+    <script src="../js/main.js" defer></script>
+    <script src="../js/appointments.js" defer></script>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <header class="header">
+      <nav class="navbar container">
+        <a href="../index.html" class="logo">
+          <span class="logo-icon">✚</span>
+          MedCare
+        </a>
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Toggle navigation"
+        >
+          ☰
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="doctors.html">Doctors</a></li>
+          <li><a href="appointments.html">Book Appointment</a></li>
+          <li>
+            <a href="my-appointments.html" class="active">My Appointments</a>
+          </li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+
+        <a href="appointments.html" class="btn btn-primary nav-btn">
+          Book Appointment
+        </a>
+      </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="appointment-hero">
+      <div class="container">
+        <span class="eyebrow">APPOINTMENT MANAGEMENT</span>
+
+        <h1>My Appointments</h1>
+
+        <p>View and manage your scheduled appointments.</p>
+      </div>
+    </section>
+
+    <!-- Appointment History -->
+    <section class="section my-appointments-section">
+      <div class="container">
+        <div class="my-appointments-heading">
+          <div>
+            <h2>Your Booking History</h2>
+            <p>All appointments saved in this browser.</p>
+          </div>
+
+          <a href="appointments.html" class="btn btn-primary">
+            + Book Appointment
+          </a>
+        </div>
+
+        <div id="appointmentList" class="appointment-list"></div>
+
+        <div id="emptyAppointments" class="empty-appointments" hidden>
+          <div class="empty-icon">📅</div>
+
+          <h3>No Appointments Yet</h3>
+
+          <p>You haven't booked any appointments yet.</p>
+
+          <a href="appointments.html" class="btn btn-primary">
+            Book Your First Appointment
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-about">
+          <a href="../index.html" class="logo footer-logo">
+            <span class="logo-icon">✚</span>
+            MedCare
+          </a>
+
+          <p>
+            Your trusted healthcare partner, providing compassionate care and
+            convenient medical services.
+          </p>
+        </div>
+
+        <div>
+          <h3>Quick Links</h3>
+          <a href="../index.html">Home</a>
+          <a href="doctors.html">Doctors</a>
+          <a href="appointments.html">Book Appointment</a>
+          <a href="my-appointments.html">My Appointments</a>
+          <a href="about.html">About Us</a>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <p>Email: info@medcare.example</p>
+          <p>Phone: +91 98765 43210</p>
+          <p>Address: Chennai, Tamil Nadu</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="currentYear"></span> MedCare. All rights reserved.</p>
+        <p>Designed for quality healthcare.</p>
+      </div>
+    </footer>
+  </body>
+</html>

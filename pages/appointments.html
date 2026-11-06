@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Book Appointment | MedCare</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/appointments.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+
+    <script src="../js/main.js" defer></script>
+    <script src="../js/booking.js" defer></script>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <header class="header">
+      <nav class="navbar container">
+        <a href="../index.html" class="logo">
+          <span class="logo-icon">✚</span>
+          MedCare
+        </a>
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Toggle navigation"
+        >
+          ☰
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="doctors.html">Doctors</a></li>
+          <li><a href="appointments.html" class="active">Appointments</a></li>
+          <li><a href="my-appointments.html">My Appointments</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+
+        <a href="appointments.html" class="btn btn-primary nav-btn">
+          Book Appointment
+        </a>
+      </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="appointment-hero">
+      <div class="container">
+        <span class="eyebrow">ONLINE BOOKING</span>
+        <h1>Book Your Appointment</h1>
+        <p>Schedule your visit with our trusted healthcare professionals.</p>
+      </div>
+    </section>
+
+    <!-- Appointment Form -->
+    <section class="section appointment-section">
+      <div class="container appointment-layout">
+        <div class="appointment-form-container">
+          <div class="form-heading">
+            <h2>Appointment Details</h2>
+            <p>Please fill in your details to schedule an appointment.</p>
+          </div>
+
+          <div
+            id="bookingMessage"
+            class="booking-message"
+            role="status"
+            hidden
+          ></div>
+
+          <form id="appointmentForm">
+            <div class="form-group">
+              <label for="patientName">Patient Name *</label>
+              <input
+                type="text"
+                id="patientName"
+                name="patientName"
+                placeholder="Enter your full name"
+                required
+                minlength="2"
+              />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="patientEmail">Email Address *</label>
+                <input
+                  type="email"
+                  id="patientEmail"
+                  name="patientEmail"
+                  placeholder="you@example.com"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="patientPhone">Phone Number *</label>
+                <input
+                  type="tel"
+                  id="patientPhone"
+                  name="patientPhone"
+                  placeholder="10-digit mobile number"
+                  pattern="[6-9][0-9]{9}"
+                  maxlength="10"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="doctorSelect">Select Doctor *</label>
+              <select id="doctorSelect" name="doctorSelect" required>
+                <option value="">Choose a doctor</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="appointmentDate">Appointment Date *</label>
+                <input
+                  type="date"
+                  id="appointmentDate"
+                  name="appointmentDate"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="appointmentTime">Appointment Time *</label>
+                <select id="appointmentTime" name="appointmentTime" required>
+                  <option value="">Select time</option>
+                  <option value="09:00 AM">09:00 AM</option>
+                  <option value="10:00 AM">10:00 AM</option>
+                  <option value="11:00 AM">11:00 AM</option>
+                  <option value="12:00 PM">12:00 PM</option>
+                  <option value="02:00 PM">02:00 PM</option>
+                  <option value="03:00 PM">03:00 PM</option>
+                  <option value="04:00 PM">04:00 PM</option>
+                  <option value="05:00 PM">05:00 PM</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="reason">Reason for Visit</label>
+              <textarea
+                id="reason"
+                name="reason"
+                rows="4"
+                placeholder="Briefly describe your reason for consultation"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary submit-btn">
+              Confirm Appointment →
+            </button>
+
+            <p class="form-note">
+              * Required fields. This is a frontend demonstration only.
+            </p>
+          </form>
+        </div>
+
+        <!-- Information Panel -->
+        <aside class="appointment-sidebar">
+          <div class="sidebar-card">
+            <h3>Appointment Information</h3>
+
+            <div class="sidebar-item">
+              <span>📅</span>
+              <div>
+                <strong>Flexible Scheduling</strong>
+                <p>Choose a date and available time.</p>
+              </div>
+            </div>
+
+            <div class="sidebar-item">
+              <span>👨‍⚕️</span>
+              <div>
+                <strong>Expert Doctors</strong>
+                <p>Consult with our medical specialists.</p>
+              </div>
+            </div>
+
+            <div class="sidebar-item">
+              <span>📋</span>
+              <div>
+                <strong>Booking Confirmation</strong>
+                <p>Your demo booking will be saved in this browser.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar-note">
+            <h3>Need Assistance?</h3>
+            <p>Contact our hospital reception for appointment assistance.</p>
+            <p><strong>+91 98765 43210</strong></p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-about">
+          <a href="../index.html" class="logo footer-logo">
+            <span class="logo-icon">✚</span>
+            MedCare
+          </a>
+
+          <p>
+            Your trusted healthcare partner, providing compassionate care and
+            convenient medical services.
+          </p>
+        </div>
+
+        <div>
+          <h3>Quick Links</h3>
+          <a href="../index.html">Home</a>
+          <a href="doctors.html">Doctors</a>
+          <a href="appointments.html">Appointments</a>
+          <a href="about.html">About Us</a>
+          <a href="my-appointments.html">My Appointments</a>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <p>Email: info@medcare.example</p>
+          <p>Phone: +91 98765 43210</p>
+          <p>Address: Chennai, Tamil Nadu</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="currentYear"></span> MedCare. All rights reserved.</p>
+        <p>Designed for quality healthcare.</p>
+      </div>
+    </footer>
+  </body>
+</html>

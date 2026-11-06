@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Our Doctors | MedCare</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/doctors.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+
+    <script src="../js/main.js" defer></script>
+    <script src="../js/doctors.js" defer></script>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <header class="header">
+      <nav class="navbar container">
+        <a href="../index.html" class="logo">
+          <span class="logo-icon">✚</span>
+          MedCare
+        </a>
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Toggle navigation"
+        >
+          ☰
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="doctors.html" class="active">Doctors</a></li>
+          <li><a href="appointments.html">Appointments</a></li>
+          <li><a href="my-appointments.html">My Appointments</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+
+        <a href="appointments.html" class="btn btn-primary nav-btn">
+          Book Appointment
+        </a>
+      </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="doctors-hero">
+      <div class="container">
+        <span class="eyebrow">OUR MEDICAL TEAM</span>
+
+        <h1>Find the Right Doctor for You</h1>
+
+        <p>
+          Explore our experienced medical professionals and find the right
+          specialist for your healthcare needs.
+        </p>
+
+        <div class="breadcrumb">
+          <a href="../index.html">Home</a>
+          <span> / </span>
+          <span>Doctors</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Doctors Directory -->
+    <section class="section doctors-directory">
+      <div class="container">
+        <div class="directory-heading">
+          <div>
+            <h2>Our Specialists</h2>
+            <p>Choose from our trusted medical professionals.</p>
+          </div>
+
+          <span id="doctorCount" class="doctor-count"> 6 Doctors </span>
+        </div>
+
+        <!-- Search and Filter -->
+        <div class="doctor-filters">
+          <div class="search-box">
+            <span>🔍</span>
+
+            <input
+              type="search"
+              id="doctorSearch"
+              placeholder="Search doctor by name..."
+              aria-label="Search doctors by name"
+            />
+          </div>
+
+          <select id="specialtyFilter" aria-label="Filter by specialty">
+            <option value="all">All Specialties</option>
+            <option value="Cardiology">Cardiology</option>
+            <option value="Neurology">Neurology</option>
+            <option value="Orthopedics">Orthopedics</option>
+            <option value="Pediatrics">Pediatrics</option>
+            <option value="Dermatology">Dermatology</option>
+            <option value="General Medicine">General Medicine</option>
+          </select>
+        </div>
+
+        <!-- Doctor Cards Rendered by JavaScript -->
+        <div class="doctor-directory-grid" id="doctorGrid">
+          <!-- JavaScript inserts doctor cards here -->
+        </div>
+
+        <div id="noDoctors" class="no-doctors" hidden>
+          <h3>No doctors found</h3>
+          <p>Try another name or specialization.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking CTA -->
+    <section class="cta-section">
+      <div class="container cta-content">
+        <div>
+          <h2>Need Help Choosing a Doctor?</h2>
+          <p>Our team is here to help you find the right care.</p>
+        </div>
+
+        <a href="appointments.html" class="btn btn-white">
+          Book an Appointment →
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-about">
+          <a href="../index.html" class="logo footer-logo">
+            <span class="logo-icon">✚</span>
+            MedCare
+          </a>
+
+          <p>
+            Your trusted healthcare partner, providing compassionate care and
+            convenient medical services.
+          </p>
+        </div>
+
+        <div>
+          <h3>Quick Links</h3>
+          <a href="../index.html">Home</a>
+          <a href="doctors.html">Doctors</a>
+          <a href="appointments.html">Appointments</a>
+          <a href="my-appointments.html">My Appointments</a>
+          <a href="about.html">About Us</a>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <p>Email: info@medcare.example</p>
+          <p>Phone: +91 98765 43210</p>
+          <p>Address: Chennai, Tamil Nadu</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="currentYear"></span> MedCare. All rights reserved.</p>
+        <p>Designed for quality healthcare.</p>
+      </div>
+    </footer>
+  </body>
+</html>

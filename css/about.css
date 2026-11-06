@@ -1,0 +1,257 @@
+/* =========================
+   ABOUT HERO
+========================= */
+
+.about-hero {
+  background: linear-gradient(120deg, #e0f2f1, #f7fbfb);
+  padding: 75px 0;
+  text-align: center;
+}
+
+.about-hero h1 {
+  font-size: clamp(32px, 5vw, 48px);
+  max-width: 850px;
+  margin: 0 auto 20px;
+  line-height: 1.25;
+}
+
+.about-hero p {
+  color: var(--text);
+  max-width: 650px;
+  margin: 0 auto 25px;
+}
+
+.breadcrumb {
+  font-size: 13px;
+  color: var(--text);
+}
+
+.breadcrumb a {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* =========================
+   ABOUT CONTENT
+========================= */
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 65px;
+}
+
+.about-image img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.about-text h2 {
+  font-size: 35px;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  color: var(--text);
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.about-text .btn {
+  margin-top: 10px;
+}
+
+/* =========================
+   MISSION AND VISION
+========================= */
+
+.mission-section {
+  background: var(--light);
+}
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.mission-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  padding: 35px;
+  transition: 0.3s;
+}
+
+.mission-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.mission-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--primary-light);
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.mission-card h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.mission-card p {
+  color: var(--text);
+  font-size: 14px;
+}
+
+/* =========================
+   VALUES
+========================= */
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.value-card {
+  text-align: center;
+  padding: 30px 20px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  transition: 0.3s;
+}
+
+.value-card:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-5px);
+}
+
+.value-icon {
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+.value-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.value-card p {
+  font-size: 13px;
+  color: var(--text);
+}
+
+/* =========================
+   FACILITIES
+========================= */
+
+.facilities-section {
+  background: var(--light);
+}
+
+.facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.facility-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.facility-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.facility-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.facility-info {
+  padding: 25px;
+}
+
+.facility-info h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.facility-info p {
+  font-size: 13px;
+  color: var(--text);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+  .about-content {
+    gap: 35px;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .facilities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 55px 0;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image img {
+    height: 320px;
+  }
+
+  .about-text h2 {
+    font-size: 29px;
+  }
+
+  .mission-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .facilities-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-card {
+    padding: 25px;
+  }
+
+  .facility-card img {
+    height: 200px;
+  }
+}
